@@ -16,7 +16,9 @@ Including another URLconf
 from django.urls import path, include
 
 import api.urls
+import internal.urls
 
 urlpatterns = [
-    path('deadman/', include(api.urls))
+    path('deadman/internal/', include(internal.urls)),
+    path('deadman/api/', include(api.urls))
 ]
