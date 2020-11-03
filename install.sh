@@ -9,7 +9,7 @@ ln -s /usr/lib/systemd/system/bbb-deadmans-cert.service /etc/systemd/system/mult
 systemctl daemon-reload
 systemctl enable bbb-deadmans-cert
 
-cp -r bbb_deadmans_cert /home/bbbb-deadmans-cert/
+cp -r bbb_deadmans_cert /home/bbb-deadmans-cert/
 chown -R bbb-deadmans-cert:bbb-deadmans-cert /home/bbb-deadmans-cert/bbb_deadmans_cert
 
 cp bbb-deadmans-cert.nginx /etc/bigbluebutton/nginx/
