@@ -12,5 +12,7 @@ class IsDeadmanEnabledView(TemplateView):
         if "meeting_id" not in request.GET:
             data["result"] = "Parameter meeting_id is missing"
             response = 400
-
+        if response == 200:
+            data["success"] = True
+            data["result"] = {"IsDeadmanEnabled": True}
         return JsonResponse(data, status=response)
