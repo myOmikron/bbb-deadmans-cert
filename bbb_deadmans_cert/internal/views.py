@@ -15,4 +15,4 @@ class IsDeadmanEnabledView(TemplateView):
         if response == 200:
             data["success"] = True
             data["result"] = {"IsDeadmanEnabled": True}
-        return JsonResponse(data, status=response)
+        return JsonResponse(data, status=response, reason=data["result"])
