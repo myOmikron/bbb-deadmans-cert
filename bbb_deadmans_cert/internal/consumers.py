@@ -8,5 +8,5 @@ class Heartbeat(WebsocketConsumer):
     def disconnect(self, close_code):
         pass
 
-    def receive(self, text_data):
+    def receive(self, text_data=None, byte_data=None):
         print(text_data)
